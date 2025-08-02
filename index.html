@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowSkyn - Natural Skincare</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>GlowSkyn</h1>
+    
+    <nav class="desktop-nav">
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeBtn">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <a href="#hero">Home</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Glow Naturally</h1>
+      <p>Organic skincare that loves your skin back.</p>
+      <a href="#pricing" class="cta-btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <h2 data-aos="fade-up">Why Choose GlowSkyn?</h2>
+    <div class="features-grid">
+      <div class="feature-card" data-aos="zoom-in">
+        <div class="icon-circle"><i class="fa-solid fa-leaf"></i></div>
+        <h3>100% Organic</h3>
+        <p>No chemicals, just nature’s best ingredients.</p>
+      </div>
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-circle"><i class="fa-solid fa-droplet"></i></div>
+        <h3>Hydration Boost</h3>
+        <p>Deeply nourishes your skin for a healthy glow.</p>
+      </div>
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-circle"><i class="fa-solid fa-spa"></i></div>
+        <h3>Soothing Effects</h3>
+        <p>Perfect for sensitive skin, calm and relax naturally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing-section" data-aos="fade-up">
+    <h2>Choose Your Glow</h2>
+    <div class="pricing-cards">
+      <div class="price-card">
+        <h3>Basic</h3>
+        <p class="price">Rs. 999</p>
+        <ul>
+          <li>Facewash</li>
+          <li>Hydrating Serum</li>
+          <li>Glow Cream</li>
+        </ul>
+        <button>Buy Now</button>
+      </div>
+      <div class="price-card">
+        <h3>Premium</h3>
+        <p class="price">Rs. 1499</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Night Cream</li>
+          <li>Free Delivery</li>
+        </ul>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section" data-aos="fade-up">
+    <h2>Start Your Glow Journey</h2>
+    <button class="cta-btn">Sign Up</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GlowSkyn. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS + Mobile Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
